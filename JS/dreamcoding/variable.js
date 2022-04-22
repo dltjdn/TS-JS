@@ -1,5 +1,5 @@
 /*
-1. Variable ( - Mutable Data Type ) 
+1. Variable ( - Mutable Data Type ) , rw(read/write)
 
 let ( ES6 에 추가 )
 */
@@ -40,13 +40,16 @@ console.log(age); //4
 
 
 /*
-2. Constants ( - Immutable Data Type )
+2. Constant ( - Immutable Data Type ), r(read only)
 
 웬만하면 값이 할당된 다음에 변경되지 않는 data type을 사용해라
 -> 이유 : (1) security (2)thread safety (3)reduce human mistakes
 */
 const daysInWeek = 7;
 const maxNumber = 5;
+
+// Immutable data types : primitive types, frozen objects
+// Mutable data types : object, JS는 기본적으로 모든 object 변경 가능(mutable)
 
 
 
@@ -55,9 +58,12 @@ const maxNumber = 5;
 
 (1) primitive type ( single item, 더 이상 작은 단위로 나눠질 수 없는 한 가지 item )
 : number, string, boolean, null, undefined, symbol
+-> 값 자체가 메모리에 저장됨
 (2) object type ( box container, single item 여러개 묶어서 한 박스로 관리 )
-(3) function ( first-class function 지원 
-    - function도 다른 data type 처럼 변수에 할당 가능하고 함수에 인자로 전달, return type으로 지정도 가능)
+-> object를 가리키는 reference가 메모리에 저장됨
+
+@ function ( first-class function 지원 
+- function도 다른 data type 처럼 변수에 할당 가능하고 함수에 인자로 전달, return type으로 지정도 가능)
 */
 
 // < number >
